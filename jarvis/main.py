@@ -3,12 +3,24 @@ Entry point for Jarvis.
 No business logic here.
 """
 
-from jarvis.app import create_app
+from jarvis.services.llm_client import LLMClient
 
 
-def run() -> None:
-    app = create_app()
-    app.run()
+def run():
+    llm = LLMClient()
+
+    print("Bonjour monsieur, à votre service\n")
+
+    while True:
+        user_input = input("Vous > ")
+
+        if user_input.lower() in ["exit", "quit"]:
+            print("Jarvis > À bientôt.")
+            break
+
+        response = llm.chat(user_input)
+
+        print(f"Jarvis > {response}\n")
 
 
 if __name__ == "__main__":

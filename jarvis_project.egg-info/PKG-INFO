@@ -6,6 +6,13 @@ Author-email: Destrohido <destrohido@gmail.com>
 Requires-Python: >=3.10
 Description-Content-Type: text/markdown
 
-# Jarvis — clean start
+# Jarvis 🤖
 
-Démarrage propre du projet Jarvis.
+Assistant CLI intelligent développé en Python.
+
+## Installation
+
+```bash
+git clone https://github.com/Theo-tech/Jarvis-Project.git
+cd Jarvis-Project
+pip install -e .
