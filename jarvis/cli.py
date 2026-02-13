@@ -1,22 +1,15 @@
-def run_cli(assistant) -> None:
-    """
-    Simple interactive CLI loop.
-    """
+class CLI:
+    def __init__(self, app):
+        self.app = app
 
-    print("Jarvis ready. Type 'exit' to quit.")
+    def start(self):
+        print("A votre service monsieur")
 
-    while True:
-        user_input = input("> ").strip()
+        while True:
+            command = input(">>> ")
 
-        if not user_input:
-            continue
+            if command.lower() == "exit":
+                print("Au revoir.")
+                break
 
-        if user_input.lower() in {"exit", "quit"}:
-            print("Goodbye.")
-            break
-
-        try:
-            response = assistant.handle_text(user_input)
-            print(response)
-        except Exception as e:
-            print(f"Error: {e}")
+            #print(f"You said: {command}")

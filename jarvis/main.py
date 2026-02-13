@@ -1,16 +1,17 @@
 """
-Entry point of the Jarvis application.
-This file should contain NO business logic.
+Jarvis - Entry Point
+--------------------
+Point d'entrée principal de l'application.
+Aucune logique métier ici.
 """
 
-from jarvis.app import run
+from jarvis.app import create_app
 
 
 def main() -> None:
-    """
-    Application entry point.
-    """
-    run()
+    """Application entrypoint."""
+    app = create_app()
+    app.run()
 
 
 if __name__ == "__main__":
