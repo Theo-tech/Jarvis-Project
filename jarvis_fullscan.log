@@ -1,0 +1,8 @@
+2026-02-13 11:27:53 START background full scan. Roots: ['C:\\', 'D:\\']
+Scanning root: C:\
+Scanning root: D:\
+2026-02-13 11:28:01 END scan. Duration: 8s. Keys: 1763
+2026-02-13 11:32:10 START background full scan. Roots: ['C:\\', 'D:\\']
+Scanning root: C:\
+Scanning root: D:\
+2026-02-13 11:32:15 END scan. Duration: 5s. Keys: 1763
