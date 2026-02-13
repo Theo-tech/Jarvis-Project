@@ -7,6 +7,10 @@ jarvis/agents/system_agent.py
 jarvis/agents/web_agent.py
 jarvis/ai/llm.py
 jarvis/ai/planner.py
+jarvis/audio/__init__.py
+jarvis/audio/stt.py
+jarvis/audio/tts.py
+jarvis/audio/voice_loop.py
 jarvis/core/__init__.py
 jarvis/core/action.py
 jarvis/core/app.py
