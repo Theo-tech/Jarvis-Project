@@ -1,18 +1,15 @@
 """
-Jarvis - Entry Point
---------------------
-Point d'entrée principal de l'application.
-Aucune logique métier ici.
+Entry point for Jarvis.
+No business logic here.
 """
 
 from jarvis.app import create_app
 
 
-def main() -> None:
-    """Application entrypoint."""
+def run() -> None:
     app = create_app()
     app.run()
 
 
 if __name__ == "__main__":
-    main()
+    run()

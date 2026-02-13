@@ -1,15 +1,37 @@
+"""
+CLI Interface
+-------------
+Manages user interaction loop.
+"""
+
 class CLI:
     def __init__(self, app):
         self.app = app
 
     def start(self):
-        print("A votre service monsieur")
+        print("🤖 Jarvis is running.")
+        print("Type 'help' to see available commands.")
+        print("Type 'exit' to quit.\n")
 
         while True:
-            command = input(">>> ")
+            try:
+                command = input(">>> ").strip()
 
-            if command.lower() == "exit":
-                print("Au revoir.")
+                if not command:
+                    continue
+
+                if command.lower() in ("exit", "quit"):
+                    print("👋 Goodbye.")
+                    break
+
+                response = self.app.router.handle(command)
+
+                if response:
+                    print(response)
+
+            except KeyboardInterrupt:
+                print("\n👋 Interrupted. Goodbye.")
                 break
 
-            #print(f"You said: {command}")
+            except Exception as e:
+                print(f"⚠️ Error: {e}")
