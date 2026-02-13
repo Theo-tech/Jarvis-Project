@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jarvis-project"
+version = "0.1.0"
+description = "Personal AI assistant system"
+authors = [
+    { name = "Destrohido", email = "destrohido@gmail.com" }
+]
+readme = "readme.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["jarvis*"]
+
+[project.scripts]
+jarvis = "jarvis.main:run"
