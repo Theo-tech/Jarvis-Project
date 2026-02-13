@@ -1,0 +1,5 @@
+debug: true
+memory_file: data/memory.json
+scan_paths:
+  - "C:/Program Files"
+  - "C:/Users"
